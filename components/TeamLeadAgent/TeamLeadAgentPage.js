@@ -20,12 +20,14 @@ const TeamLeadAgentPage = () => {
       </Head>
       <div className="py-16">
         <div className="min-h-full max-w-auto">
-          <table className="min-w-full">
+          <table className="w-auto">
             <AgentThead />
-          </table>
-          <table className="min-w-full">
             <AgentPeopleTbody />
           </table>
+        </div>
+        <div className="max-w-auto md:float-right sm:float-left sm:mx-2 md:mx-8 mt-5">
+          <button className="bg-blue-600 text-white px-4 py-2 mr-6 ml-6 font-bold">Add New Agent</button>
+          <button className="bg-red-600 text-white px-4 py-2 font-bold">Remove New Agent</button>
         </div>
       </div>
     </>

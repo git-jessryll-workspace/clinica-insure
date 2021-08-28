@@ -29,7 +29,7 @@ export const MonthPicker = ({ onChange, datePick }) => {
   return (
     <div className="relative text-gray-400 focus-within:text-gray-600">
       <div className="absolute flex inset-y-0 left-0 items-center z-10 hover:text-gray-800 cursor-pointer" onClick={__handleDecreaseMonth}>
-        <ChevronLeftIcon className="h-10 w-10" />
+        <ChevronLeftIcon className="xs:h-5 xs:w-5 sm:h-4 sm:w-4 md:h-10 md:w-10" aria-hidden="true"/>
       </div>
       <DatePicker
         selected={startDate}
@@ -39,7 +39,7 @@ export const MonthPicker = ({ onChange, datePick }) => {
         customInput={<CustomInput />}
       />
       <div className="absolute ml-8 inset-y-0 right-0 z-10 flex items-center hover:text-gray-800 cursor-pointer" onClick={__handelIncreaseMonth}>
-        <ChevronRightIcon className="h-10 w-10" aria-hidden="true" />
+        <ChevronRightIcon className="xs:w-0 xs:h-0 sm:w-4 sm:h-4 md:h-10 md:w-10" aria-hidden="true" />
       </div>
     </div>
   );

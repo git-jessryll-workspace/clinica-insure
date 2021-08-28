@@ -4,9 +4,11 @@ import { useContext, useEffect } from "react";
 import AgentVerificationTbody from "../../../components/TeamLeadAgent/AgentVerificationTbody";
 import AgentVerificationThead from "../../../components/TeamLeadAgent/AgentVerificationThead";
 import { GlobalContext } from "../../../context/state";
+
 const AgentDetail = () => {
   const route = useRouter();
   const global = useContext(GlobalContext);
+  
   useEffect(() => {
     global.updateActiveMenuLink("agent");
   }, []);
@@ -28,7 +30,7 @@ const AgentDetail = () => {
             />
           </div>
           <div className="mb-10">
-            <h4 className="text-xl mt-3 font-normal text-blue-700">
+            <h4 className="text-2xl mt-3 font-normal text-blue-700 cursor-pointer">
               Chinmay Sarasvati
             </h4>
           </div>
@@ -44,9 +46,7 @@ const AgentDetail = () => {
             <AgentVerificationThead />
           </table>
           <table className="w-full">
-            <AgentVerificationTbody 
-              agentId={route.query.id}
-            />
+            <AgentVerificationTbody agentId={route.query.id} />
           </table>
         </div>
       </div>
