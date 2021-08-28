@@ -1,11 +1,16 @@
 import "../styles/globals.css";
 import Layout from "../components/Layout";
+import { GlobalProvider } from "../context/state";
 
 function MyApp({ Component, pageProps }) {
-  return(
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>);
+  return (
+    <GlobalProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+      );
+    </GlobalProvider>
+  );
 }
 
 export default MyApp;

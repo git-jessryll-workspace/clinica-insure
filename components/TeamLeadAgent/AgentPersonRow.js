@@ -26,7 +26,7 @@ export default function AgentPersonRow({ ...props }) {
       <td className="whitespace-nowrap text-sm font-medium" colSpan="2">
         <Link href={`/agent/${person.name}`}>
           <a>
-            <ChevronRightIcon className="text-gray-400 cursor-pointer h-10 w-10 float-right mx-8" />
+            <ChevronRightIcon className="text-gray-400 cursor-pointer h-10 w-10 float-center mx-8" />
           </a>
         </Link>
       </td>

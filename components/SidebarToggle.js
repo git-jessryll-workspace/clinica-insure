@@ -9,6 +9,7 @@ export default function SidebarToggle({ navigation }) {
             name={item.name}
             href={item.href}
             Icon={item.icon}
+            current={item.current}
           />
         ))}
       </nav>

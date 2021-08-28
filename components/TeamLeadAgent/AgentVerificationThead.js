@@ -4,7 +4,7 @@ import { CommonContext } from "../../context/state";
 import { MonthPicker } from "../Utils/MonthPicker";
 import { SearchThead } from "../Utils/SearchComponent";
 
-export default function VerificationThead() {
+export default function AgentVerificationThead() {
   const common = useContext(CommonContext);
 
   return (
@@ -22,33 +22,43 @@ export default function VerificationThead() {
           </th>
           <th
             scope="col"
-            className="px-6 py-3 text-xs font-medium text-gray-500 text-left tracking-wider w-auto"
+            className="px-6 py-3 text-xs font-medium text-gray-500 tracking-wider w-auto text-center"
           >
-            <NormalSelectItem selection={common.insuranceProviders} />
+            <NormalSelectItem
+              selection={[
+                {
+                  id: "1",
+                  name: "Top Verifiers",
+                },
+              ]}
+            />
           </th>
           <th
             scope="col"
-            className="px-3 text-center text-xs tracking-wider w-72"
+            className="px-10 text-center text-xs tracking-wider w-80"
           >
             <MonthPicker onChange={(e) => console.log(e)} />
           </th>
           <th
             scope="col"
-            className="px-2 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider"
+            className="px-10 py-6 text-center text-xs font-medium text-gray-500 uppercase tracking-wider"
           >
-            <NormalSelectItem
-              selection={[{
-                id:'1',
-                name: "Latest"
-              },
-              {
-                id:'2',
-                name: "Oldest"
-              }
-            ]}
-            />
+            <div className="ml-6">
+              <NormalSelectItem
+                selection={[
+                  {
+                    id: "1",
+                    name: "Latest",
+                  },
+                  {
+                    id: "2",
+                    name: "Oldest",
+                  },
+                ]}
+              />
+            </div>
           </th>
-          <th scope="col" className="relative px-6 py-6 w-auto float-right">
+          <th scope="col" className="relative px-6 py-6 w-full float-left">
             <SearchThead />
           </th>
         </tr>

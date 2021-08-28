@@ -3,37 +3,28 @@ import SectionHead from "./SectionHead";
 import TransferModal from "./TransferModal";
 import VerificationTbody from "./VerificationTbody";
 import VerificationThead from "./VerificationThead";
+import Head from "next/head";
 
 const TeamLeadDashboard = () => {
   const [open, setOpen] = useState(false);
   const toggleTransferModal = () => setOpen(!open);
   return (
-    <div className="py-16">
-      <SectionHead />
-      <TransferModal
-        toggleTransferModal={toggleTransferModal}
-        open={open}
-      />
-      <div className="min-h-full">
-        <div className="flex flex-col">
-          <div className="overflow-x-auto -my-2 sm:-mx-6 lg:-mx-8">
-            <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-              <div className="overflow-hidden">
-                <table className="min-w-full">
-                </table>
-                <table className="min-w-full">
-                  <VerificationThead />
-                  <VerificationTbody 
-                    
-                    toggleTransferModal={toggleTransferModal}
-                  />
-                </table>
-              </div>
-            </div>
-          </div>
+    <>
+      <Head>
+        <title>Dashboard</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <div className="py-16">
+        <SectionHead />
+        <TransferModal toggleTransferModal={toggleTransferModal} open={open} />
+        <div className="min-h-full max-w-auto">
+          <table className="min-w-full">
+            <VerificationThead />
+            <VerificationTbody toggleTransferModal={toggleTransferModal} />
+          </table>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

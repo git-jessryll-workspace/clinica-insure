@@ -1,4 +1,9 @@
 import { createContext, useState } from "react";
+import {
+  FolderIcon,
+  HomeIcon,
+  UsersIcon,
+} from "@heroicons/react/outline";
 
 export const TeamLeadContext = createContext();
 
@@ -161,7 +166,7 @@ export const CommonProvider = props => {
     { id: 3, name: "Verified" },
     { id: 4, name: "Not Verified" },
     { id: 5, name: "Pending" },
-  ])
+  ]);
   let data = {
       insuranceProviders,
       selectionTypes,
@@ -171,4 +176,48 @@ export const CommonProvider = props => {
       {props.children}
     </CommonContext.Provider>
   );
+}
+
+export const GlobalContext = createContext();
+
+export const GlobalProvider = props => {
+  const [navigation, setNavigation] = useState([
+    {
+      name: "Dashboard",
+      href: "/",
+      icon: HomeIcon,
+      current: false,
+      code: 'dashboard'
+    },
+    {
+      name: "Agent List",
+      href: "/agent",
+      icon: UsersIcon,
+      current: false,
+      code: 'agent'
+    },
+    {
+      name: "Insurance Provider",
+      href: "/insurance-provider",
+      icon: FolderIcon,
+      current: false,
+      code: 'insurance_provider'
+    },
+  ]);
+  const updateActiveMenuLink = (code) => {
+      const newNavigation = navigation.map((nav) => {
+          return {
+            ...nav,
+            current: nav.code === code,
+          }
+      })
+      setNavigation(newNavigation);
+  }
+  let data = {
+      navigation,
+      updateActiveMenuLink,
+  }; 
+  return <GlobalContext.Provider value={data}>
+    {props.children}
+  </GlobalContext.Provider>
 }

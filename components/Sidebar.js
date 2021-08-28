@@ -22,6 +22,7 @@ function Sidebar({ navigation }) {
                     href={item.href}
                     name={item.name}
                     Icon={item.icon}
+                    current={item.current}
                   />
                 ))}
               </nav>

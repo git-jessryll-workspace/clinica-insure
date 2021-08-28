@@ -1,28 +1,34 @@
-import { useState } from "react";
-import AgentPeopleTbody from './AgentPeopleTbody';
+import { useState, useContext, useEffect } from "react";
+import AgentPeopleTbody from "./AgentPeopleTbody";
 import AgentThead from "./AgentThead";
+import Head from "next/head";
+import { GlobalContext } from "../../context/state";
 
 const TeamLeadAgentPage = () => {
-  const [open, setOpen] = useState(false);
+  const global = useContext(GlobalContext);
+  useEffect(() => {
+    global.updateActiveMenuLink("agent");
+    return () => {
+      global.updateActiveMenuLink("");
+    };
+  }, []);
   return (
-    <div className="py-16">
-      <div className="min-h-full">
-        <div className="flex flex-col">
-          <div className="overflow-x-auto -my-2 sm:-mx-6 lg:-mx-2">
-            <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-              <div className="overflow-hidden">
-                <table className="min-w-full">
-                  <AgentThead />
-                </table>
-                <table className="min-w-full">
-                  <AgentPeopleTbody/>
-                </table>
-              </div>
-            </div>
-          </div>
+    <>
+      <Head>
+        <title>Agent list</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <div className="py-16">
+        <div className="min-h-full max-w-auto">
+          <table className="min-w-full">
+            <AgentThead />
+          </table>
+          <table className="min-w-full">
+            <AgentPeopleTbody />
+          </table>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

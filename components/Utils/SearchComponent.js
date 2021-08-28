@@ -7,7 +7,7 @@ export const SearchThead = ({onChange}) => {
       </div>
       <input
         id="search-field"
-        className="block w-full h-full pl-12 pr-5 py-4 border-transparent text-gray-100 placeholder-gray-100 focus:outline-none focus:placeholder-gray-100 focus:ring-0 focus:border-transparent sm:text-sm md:text-md lg:text-xl xl:text-2xl bg-blue-800 rounded-xl"
+        className="block w-full h-full pl-12 pr-5 py-3 border-transparent text-gray-100 placeholder-gray-100 focus:outline-none focus:placeholder-gray-100 focus:ring-0 focus:border-transparent sm:text-sm md:text-md lg:text-xl xl:text-2xl bg-blue-800 rounded-xl"
         placeholder="Search"
         type="search"
         name="search"
