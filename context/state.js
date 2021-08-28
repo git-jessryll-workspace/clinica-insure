@@ -71,7 +71,7 @@ export const TeamLeadProvider = props => {
       date: "23 Sep 2019",
       time: "Time in 02:52PM",
       image:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     },
     {
       name: "Dina Glenn",
@@ -87,11 +87,49 @@ export const TeamLeadProvider = props => {
       date: "23 Sep 2019",
       time: "Time in 02:52PM",
       image:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+        "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     },
   ]);
+  const [insuranceVerifications, setInsuranceVerifications] = useState([
+    {
+      id: "id1",
+      name: "Chinmay Saravati",
+      date: "23 Sep 2019",
+      time: "02:52PM",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      total_unverified: 1,
+      total_verified: 10,
+    },
+    {
+      id: "id2",
+      name: "Dina Glenn",
+      date: "22 Sep 2019",
+      time: "01:38AM",
+      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+      total_unverified: 1,
+      total_verified: 20,
+    },
+    {
+      id: "id3",
+      name: "Izabella Tabakova",
+      date: "23 Sep 2019",
+      time: "06:58PM",
+      image: "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      total_unverified: 1,
+      total_verified: 30,
+    },
+    {
+      id: "id4",
+      name: "Opi Watihana",
+      date: "29 Sep 2019",
+      time: "02:52PM",
+      image: "https://images.unsplash.com/photo-1520785643438-5bf77931f493?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      total_unverified: 1,
+      total_verified: 20,
+    }
+  ])
   return (
-    <TeamLeadContext.Provider value={{ verifications, agentList }}>
+    <TeamLeadContext.Provider value={{ verifications, agentList, insuranceVerifications }}>
       {props.children}
     </TeamLeadContext.Provider>
   );
@@ -198,10 +236,10 @@ export const GlobalProvider = props => {
     },
     {
       name: "Insurance Provider",
-      href: "/insurance-provider",
+      href: "/insurance",
       icon: FolderIcon,
       current: false,
-      code: 'insurance_provider'
+      code: 'insurance'
     },
   ]);
   const updateActiveMenuLink = (code) => {

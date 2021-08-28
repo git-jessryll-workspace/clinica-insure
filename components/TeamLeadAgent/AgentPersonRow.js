@@ -17,10 +17,10 @@ export default function AgentPersonRow({ ...props }) {
           </div>
         </div>
       </td>
-      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-400">
+      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-400 text-center">
         {person.date}
       </td>
-      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-400">
+      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-400 text-center">
         {person.time}
       </td>
       <td className="whitespace-nowrap text-sm font-medium w-auto" colSpan="2">
