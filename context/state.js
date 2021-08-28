@@ -6,6 +6,9 @@ import {
 } from "@heroicons/react/outline";
 
 export const TeamLeadContext = createContext();
+export const GlobalContext = createContext();
+export const AuthContext = createContext();
+export const CommonContext = createContext();
 
 export const TeamLeadProvider = props => {
   const [verifications, setVerifications] = useState([
@@ -135,8 +138,6 @@ export const TeamLeadProvider = props => {
   );
 }
 
-export const AuthContext = createContext();
-
 export const AuthProvider = props => {
   let data = {
     auth: {}
@@ -147,8 +148,6 @@ export const AuthProvider = props => {
     </AuthContext.Provider>
   )
 }
-
-export const CommonContext = createContext();
 
 export const CommonProvider = props => {
   const [insuranceProviders, serInsuranceProviders] = useState([
@@ -215,8 +214,6 @@ export const CommonProvider = props => {
     </CommonContext.Provider>
   );
 }
-
-export const GlobalContext = createContext();
 
 export const GlobalProvider = props => {
   const [navigation, setNavigation] = useState([
