@@ -1,8 +1,9 @@
 import { classNames } from "../../Utils/index";
 import { ChevronRightIcon } from "@heroicons/react/solid";
+import Link from "next/link";
 
 export default function AgentVerificationRow({ ...props }) {
-  const { verification_process, request_number, insurance_provider, status } =
+  const { verification_process, request_number, insurance_provider, status, agentId } =
     props;
   return (
     <tr className="hover:bg-gray-100">
@@ -44,6 +45,8 @@ export default function AgentVerificationRow({ ...props }) {
         </div>
       </td>
       <td className="px-3 py-4 whitespace-nowrap text-center">
+          <Link href={`/agent/${agentId}/verification/${request_number}`}>
+          <a>
         <ChevronRightIcon
           className={classNames(
             status === "PENDING"
@@ -52,6 +55,8 @@ export default function AgentVerificationRow({ ...props }) {
             "h-10 w-10 float-center"
           )}
         />
+          </a>
+          </Link>
       </td>
     </tr>
   );

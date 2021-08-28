@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { TeamLeadContext } from "../../context/state";
 import AgentVerificationRow from "./AgentVerificationRow";
 
-export default function AgentVerificationTbody() {
+export default function AgentVerificationTbody({agentId}) {
   const tlContext = useContext(TeamLeadContext);
   return (
     <tbody className="bg-white divide-y divide-gray-200">
@@ -13,6 +13,7 @@ export default function AgentVerificationTbody() {
           verification_process={verification.vprocess}
           insurance_provider={verification.insurance_provider}
           status={verification.status}
+          agentId={agentId}
         />
       ))}
     </tbody>

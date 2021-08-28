@@ -44,7 +44,9 @@ const AgentDetail = () => {
             <AgentVerificationThead />
           </table>
           <table className="w-full">
-            <AgentVerificationTbody />
+            <AgentVerificationTbody 
+              agentId={route.query.id}
+            />
           </table>
         </div>
       </div>
