@@ -8,6 +8,7 @@ import NormalSelectItem from "../Utils/NormalSelectItem";
 import { useContext } from "react";
 import { CommonContext } from "../../context/state";
 import { MonthPicker } from "../Utils/MonthPicker";
+import { SearchThead } from "../Utils/SearchComponent";
 
 export default function VerificationThead() {
   const common = useContext(CommonContext);
@@ -54,18 +55,7 @@ export default function VerificationThead() {
             />
           </th>
           <th scope="col" className="relative px-6 py-6 w-auto float-right">
-            <div className="relative w-full text-gray-400 focus-within:text-gray-600">
-              <div className="absolute inset-y-0 left-0 items-center pointer-events-none flex">
-                <SearchIcon className="h-8 w-8" aria-hidden="true" />
-              </div>
-              <input
-                id="search-field"
-                className="block w-full h-full pl-8 pr-3 py-2 border-transparent text-gray-900 placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-0 focus:border-transparent sm:text-sm md:text-lg lg:text-lg xl:text-2xl"
-                placeholder="Search"
-                type="search"
-                name="search"
-              />
-            </div>
+            <SearchThead />
           </th>
         </tr>
       </thead>

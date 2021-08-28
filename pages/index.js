@@ -1,9 +1,9 @@
-import TeamLeadDashboard from "../components/TeamLeadDashboard/TeamLeadDashboard";
+import TeamLeadDashboardPage from "../components/TeamLeadDashboard/TeamLeadDashboardPage";
 
 export default function Home() {
   return (
     <>
-        <TeamLeadDashboard />
+        <TeamLeadDashboardPage />
     </>
   );
 }

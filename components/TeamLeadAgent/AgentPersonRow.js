@@ -23,10 +23,10 @@ export default function AgentPersonRow({ ...props }) {
       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-400">
         {person.time}
       </td>
-      <td className="whitespace-nowrap text-sm font-medium">
+      <td className="whitespace-nowrap text-sm font-medium" colSpan="2">
         <Link href={`/agent/${person.name}`}>
           <a>
-            <ChevronRightIcon className="text-gray-400 cursor-pointer h-10 w-10 float-center" />
+            <ChevronRightIcon className="text-gray-400 cursor-pointer h-10 w-10 float-right mx-8" />
           </a>
         </Link>
       </td>
