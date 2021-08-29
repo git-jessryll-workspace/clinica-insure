@@ -1,15 +1,16 @@
 import "../styles/globals.css";
 import Layout from "../components/Layout";
-import { GlobalProvider } from "../context/state";
+import { AuthProvider, GlobalProvider } from "../context/state";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <GlobalProvider>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-      );
-    </GlobalProvider>
+    <AuthProvider>
+      <GlobalProvider>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </GlobalProvider>
+    </AuthProvider>
   );
 }
 
