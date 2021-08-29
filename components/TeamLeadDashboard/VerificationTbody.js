@@ -5,7 +5,7 @@ import { TeamLeadContext } from '../../context/state';
 export default function VerificationTbody({ toggleTransferModal }) {
   const tlContext = useContext(TeamLeadContext);
   return (
-    <tbody className="bg-white divide-y divide-gray-200">
+    <div className="grid grid-cols-1">
       {tlContext.verifications.map((verification) => (
         <VerificationRow
         key={verification.request_number}
@@ -16,6 +16,6 @@ export default function VerificationTbody({ toggleTransferModal }) {
           toggleTransferModal={toggleTransferModal}
         />
       ))}
-    </tbody>
+    </div>
   );
 }

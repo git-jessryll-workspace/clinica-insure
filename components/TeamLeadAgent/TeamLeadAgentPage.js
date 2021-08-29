@@ -19,20 +19,24 @@ const TeamLeadAgentPage = () => {
         <title>Agent list</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div className="py-16">
-        <div className="min-h-full max-w-auto">
-          <table className="w-auto">
-            <AgentThead />
-            <AgentPeopleTbody />
-          </table>
+      <div className="py-16 px-8">
+        <div className="min-h-full min-w-full max-w-auto">
+          <AgentThead />
+          <AgentPeopleTbody />
         </div>
-        <div className="max-w-auto md:float-right sm:float-left sm:mx-2 md:mx-8 mt-5">
-          <Link href="#">
-          <a className="bg-red-600 text-white px-4 py-2 font-bold">Remove New Agent</a>
-          </Link>
-          <Link href={`/agent/create`}>
-          <a className="bg-blue-600 text-white px-4 py-2 mr-6 ml-6 font-bold">Add New Agent</a>
-          </Link>
+        <div className="grid grid-cols-1 sm:float-left md:float-right mt-6 text-sm">
+          <div>
+            <Link href="#">
+              <button className="bg-red-600 text-white px-4 py-1 font-bold">
+                Remove New Agent
+              </button>
+            </Link>
+            <Link href={`/agent/create`}>
+              <button className="bg-blue-600 text-white px-4 py-1 ml-2 font-bold">
+                Add New Agent
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </>

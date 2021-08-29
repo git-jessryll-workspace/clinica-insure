@@ -1,6 +1,6 @@
 export default function SectionHead() {
   return (
-    <div className="pb-5 border-gray-200 ml-6">
+    <div className="pb-5 border-gray-200">
       <div className="">
         <h1 className="text-3xl text-blue-700">Verification</h1>
         <p className="text-blue-700 mb-4 mt-5">Date: April 10, 2021</p>

@@ -8,7 +8,7 @@ import { GlobalContext } from "../../../context/state";
 const AgentDetail = () => {
   const route = useRouter();
   const global = useContext(GlobalContext);
-  
+
   useEffect(() => {
     global.updateActiveMenuLink("agent");
   }, []);
@@ -35,19 +35,15 @@ const AgentDetail = () => {
             </h4>
           </div>
         </div>
-        <div className="my-5 text-blue-600">Date: April 10, 2021</div>
-        <div className="my-6">
+        <div className="my-2 text-blue-600">Date: April 10, 2021</div>
+        <div className="my-2">
           <span className="mr-4 text-blue-600">Total Verification: 20</span>
           <span className="mr-4 text-green-600">Verified: 18</span>
           <span className="text-red-600">Not Verified: 2</span>
         </div>
         <div className="-mx-6">
-          <table className="w-full">
-            <AgentVerificationThead />
-          </table>
-          <table className="w-full">
-            <AgentVerificationTbody agentId={route.query.id} />
-          </table>
+          <AgentVerificationThead />
+          <AgentVerificationTbody agentId={route.query.id} />
         </div>
       </div>
     </>

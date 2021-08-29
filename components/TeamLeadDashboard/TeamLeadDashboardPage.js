@@ -14,14 +14,12 @@ const TeamLeadDashboard = () => {
         <title>Dashboard</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div className="py-16">
+      <div className="py-16 px-8">
         <SectionHead />
         <TransferModal toggleTransferModal={toggleTransferModal} open={open} />
-        <div className="min-h-full max-w-auto">
-          <table className="min-w-full">
-            <VerificationThead />
-            <VerificationTbody toggleTransferModal={toggleTransferModal} />
-          </table>
+        <div className="min-h-full min-w-full max-w-auto">
+          <VerificationThead />
+          <VerificationTbody toggleTransferModal={toggleTransferModal} />
         </div>
       </div>
     </>

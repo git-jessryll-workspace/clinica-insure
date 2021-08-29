@@ -9,50 +9,40 @@ export default function VerificationThead() {
 
   return (
     <>
-      <thead>
-        <tr>
-          <th
-            scope="col"
-            className="px-6 py-3 text-left text-xs font-medium text-gray-900 tracking-wider w-auto"
-          >
-            <NormalSelectItem
-              label="Selecting Item Types"
-              selection={common.selectionTypes}
-            />
-          </th>
-          <th
-            scope="col"
-            className="px-6 py-3 text-xs font-medium text-gray-500 text-left tracking-wider w-auto"
-          >
-            <NormalSelectItem selection={common.insuranceProviders} />
-          </th>
-          <th
-            scope="col"
-            className="px-3 text-center text-xs tracking-wider w-72"
-          >
-            <MonthPicker onChange={(e) => console.log(e)} />
-          </th>
-          <th
-            scope="col"
-            className="px-2 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider"
-          >
-            <NormalSelectItem
-              selection={[{
-                id:'1',
-                name: "Latest"
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-2 mt-5 mb-5">
+        <div className="text-left text-xs font-medium text-gray-900 tracking-wider">
+          <NormalSelectItem
+            label="Selecting Item Types"
+            selection={common.selectionTypes}
+          />
+        </div>
+        <div className="text-xs font-medium text-gray-500 text-left tracking-wider">
+          <br />
+          <NormalSelectItem selection={common.insuranceProviders} />
+        </div>
+        <div className="text-center text-xs tracking-wider rounded-xl">
+          <br />
+          <MonthPicker onChange={(e) => console.log(e)} />
+        </div>
+        <div className="text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+          <br />
+          <NormalSelectItem
+            selection={[
+              {
+                id: "1",
+                name: "Latest",
               },
               {
-                id:'2',
-                name: "Oldest"
-              }
+                id: "2",
+                name: "Oldest",
+              },
             ]}
-            />
-          </th>
-          <th scope="col" className="relative px-6 py-6 w-auto float-right">
-            <SearchThead />
-          </th>
-        </tr>
-      </thead>
+          />
+        </div>
+        <div className="mt-3 md:mt-5">
+          <SearchThead />
+        </div>
+      </div>
     </>
   );
 }

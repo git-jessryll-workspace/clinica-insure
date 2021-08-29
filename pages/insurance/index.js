@@ -19,7 +19,7 @@ const InsuranceProvider = () => {
       <Head>
         <title>Insurance Provider</title>
       </Head>
-      <div className="py-10 mx-16">
+      <div className="py-10 mx-6">
         <ul
           role="list"
           className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
@@ -27,18 +27,18 @@ const InsuranceProvider = () => {
           {common.insuranceProviders.map((provider) => (
             <li
               key={provider.id}
-              className="col-span-1 bg-white rounded-lg hover:bg-gray-100 py-6"
+              className="col-span-1 bg-white rounded-lg py-6"
             >
               <div className="w-full flex items-center justify-between p-6 space-x-6">
                 <div className="flex-1">
                   <div className="flex items-center space-x-3">
-                      <Link href={`/insurance/${provider.name}`}>
-                    <h3 className="text-gray-600 text-xl truncate cursor-pointer">
-                      {provider.name}
-                    </h3>
-                      </Link>
+                    <Link href={`/insurance/${provider.name}`}>
+                      <h3 className="text-gray-600 text-lg truncate cursor-pointer">
+                        {provider.name}
+                      </h3>
+                    </Link>
                   </div>
-                  <div className="mt-1 text-gray-400 text-lg">
+                  <div className="mt-1 text-gray-400 text-sm">
                     {provider.description}
                   </div>
                 </div>
@@ -46,11 +46,13 @@ const InsuranceProvider = () => {
               <div>
                 <div className="-mt-px flex mx-6">
                   {tl.agentList.map((agent) => {
-                    return <img
-                      className="w-10 h-10 bg-gray-300 mx-1 rounded-full flex-shrink-0"
-                      src={agent.image}
-                      alt=""
-                    />;
+                    return (
+                      <img
+                        className="w-10 h-10 bg-gray-300 mx-1 rounded-full flex-shrink-0"
+                        src={agent.image}
+                        alt=""
+                      />
+                    );
                   })}
                 </div>
               </div>

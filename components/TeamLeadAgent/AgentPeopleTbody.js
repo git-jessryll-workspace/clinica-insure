@@ -5,13 +5,13 @@ import AgentPersonRow from "./AgentPersonRow";
 export default function AgentPeopleTbody() {
   const tlContext = useContext(TeamLeadContext);
   return (
-    <tbody className="bg-white divide-y divide-gray-200">
+    <div className="grid grid-cols-1">
       {tlContext.agentList.map((agent) => (
         <AgentPersonRow
           key={agent.name}
           person={agent}
         />
       ))}
-    </tbody>
+    </div>
   );
 }

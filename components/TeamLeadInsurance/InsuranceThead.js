@@ -9,21 +9,16 @@ export default function InsuranceThead() {
 
   return (
     <>
-      <thead>
-        <tr>
-          <th
-            scope="col"
-            className="px-6 py-3 text-left text-xs font-medium text-gray-900 tracking-wider w-auto"
-          >
+      <div className="mt-6 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-2">
+          <div className="text-left text-xs font-medium text-gray-900 tracking-wider">
             <NormalSelectItem
               label="Selecting Item Types"
               selection={common.selectionTypes}
             />
-          </th>
-          <th
-            scope="col"
-            className="px-6 py-3 text-xs font-medium text-gray-500 tracking-wider w-auto text-center"
-          >
+          </div>
+          <div className="text-xs font-medium text-gray-500 tracking-wider text-center">
+            <br />
             <NormalSelectItem
               selection={[
                 {
@@ -32,37 +27,31 @@ export default function InsuranceThead() {
                 },
               ]}
             />
-          </th>
-          <th
-            scope="col"
-            className="px-10 text-center text-xs tracking-wider w-80"
-          >
+          </div>
+          <div className="text-center text-xs tracking-wider">
+            <br />
             <MonthPicker onChange={(e) => console.log(e)} />
-          </th>
-          <th
-            scope="col"
-            className="px-10 py-6 text-center text-xs font-medium text-gray-500 uppercase tracking-wider"
-          >
-            <div className="ml-6">
-              <NormalSelectItem
-                selection={[
-                  {
-                    id: "1",
-                    name: "Latest",
-                  },
-                  {
-                    id: "2",
-                    name: "Oldest",
-                  },
-                ]}
-              />
-            </div>
-          </th>
-          <th scope="col" className="relative px-6 py-6 w-full float-left">
+          </div>
+          <div className="text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <br />
+            <NormalSelectItem
+              selection={[
+                {
+                  id: "1",
+                  name: "Latest",
+                },
+                {
+                  id: "2",
+                  name: "Oldest",
+                },
+              ]}
+            />
+          </div>
+          <div className="relative mt-3 md:mt-5">
             <SearchThead />
-          </th>
-        </tr>
-      </thead>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
