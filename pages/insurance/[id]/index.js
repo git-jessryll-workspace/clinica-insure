@@ -3,7 +3,7 @@ import { useContext, useEffect } from "react";
 import { useRouter } from "next/router";
 import InsuranceTbody from "../../../components/TeamLeadInsurance/InsuranceTbody";
 import InsuranceThead from "../../../components/TeamLeadInsurance/InsuranceThead";
-import { GlobalContext } from "../../../context/state";
+import { GlobalContext } from "../../../context";
 import Link from "next/link";
 
 export default function InsuranceProviderDetail() {

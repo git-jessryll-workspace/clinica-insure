@@ -3,7 +3,7 @@
 export default function VerificationDetail() {
     return (
       <>
-        <div className="my-3 mx-8 grid grid-cols-1">
+        <div className="my-3 mx-5 grid grid-cols-1">
           <div className="bg-white p-8 grid grid-cols-1 md:grid-cols-2">
             <div className="flex">
               <div className="mr-4 flex-shrink-0">
@@ -36,7 +36,7 @@ export default function VerificationDetail() {
             </div>
           </div>
           <div className="bg-white p-8 mt-6">
-            <div className="my-5 sm:w-full md:w-96">
+            <div className="sm:w-full md:w-96">
               <h1 className="sm:text-lg md:text-xl font-semibold text-blue-700">
                 Patient : Catrina Amber (Female)
               </h1>
@@ -58,8 +58,9 @@ export default function VerificationDetail() {
                 </span>
               </div>
             </div>
+            <br/>
             <hr />
-            <div className="my-6">
+            <div className="my-5">
               <h1 className="text-blue-700 sm:text-lg md:text-xl font-semibold">
                 Insurance Provider
               </h1>
@@ -85,8 +86,7 @@ export default function VerificationDetail() {
               </h2>
             </div>
             <div className="bg-gray-200 p-4 mt-8 text-gray-500 sm:text-sm md:text-lg h-44 rounded-sm">
-              Catrina Amber is Qualified in Assisted Reproductive Service MBS
-              13200
+              Catrina Amber is Qualified in Assisted Reproductive Service MBS 13200
             </div>
           </div>
         </div>

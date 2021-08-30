@@ -1,7 +1,7 @@
 import { Fragment, useContext } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XIcon } from "@heroicons/react/outline";
-import { TeamLeadContext } from "../../context/state";
+import { TeamLeadContext } from "../../context";
 
 export default function TransferModal({ toggleTransferModal, open }) {
   const tlContext = useContext(TeamLeadContext);

@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react";
 import AgentPeopleTbody from "./AgentPeopleTbody";
 import AgentThead from "./AgentThead";
 import Head from "next/head";
-import { GlobalContext } from "../../context/state";
+import { GlobalContext } from "../../context";
 import Link from "next/link";
 
 const TeamLeadAgentPage = () => {

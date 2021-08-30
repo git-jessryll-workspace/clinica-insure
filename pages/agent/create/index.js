@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react";
-import { GlobalContext } from "../../../context/state";
+import { GlobalContext } from "../../../context";
 
 export default function CreateAgentForm() {
   const global = useContext(GlobalContext);

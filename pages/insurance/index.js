@@ -3,7 +3,7 @@ import {
   CommonContext,
   GlobalContext,
   TeamLeadContext,
-} from "../../context/state";
+} from "../../context";
 import Head from "next/head";
 import Link from "next/link";
 

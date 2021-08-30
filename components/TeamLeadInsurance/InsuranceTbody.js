@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { TeamLeadContext } from "../../context/state";
+import { TeamLeadContext } from "../../context";
 import InsuranceAgentVerificationRow from "./InsuranceAgentVerificationRow";
 
 export default function InsuranceTbody({agentId}) {

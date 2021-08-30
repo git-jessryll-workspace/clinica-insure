@@ -1,7 +1,7 @@
 import { useRouter } from "next/dist/client/router";
 import Head from "next/head";
 import { useContext, useState } from "react";
-import { AuthContext } from './../context/state';
+import { AuthContext } from '../context';
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -11,9 +11,11 @@ const Login = () => {
 
   const __handleLogin = (e) => {
     e.preventDefault();
-    localStorage.setItem({
+    
+    localStorage.setItem('auth_login',JSON.stringify({
         email,
-    })
+        type: 'agent',
+    }))
     route.push('/');
   };
 
