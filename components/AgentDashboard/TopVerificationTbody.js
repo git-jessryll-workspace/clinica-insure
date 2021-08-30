@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { AgentContext } from '../../context/state';
+import { AgentContext } from '../../context';
 import VerificationRow from "./VerificationRow";
 
 export default function TopVerificationTbody() {

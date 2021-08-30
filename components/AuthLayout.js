@@ -8,7 +8,7 @@ import {
   TeamLeadProvider,
   GlobalContext,
   AgentProvider,
-} from "../context/state";
+} from "../context";
 import SidebarToggle from "./SidebarToggle";
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";

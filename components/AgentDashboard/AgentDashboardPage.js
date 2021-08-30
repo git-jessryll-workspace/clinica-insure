@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { useContext } from 'react';
-import { AgentContext } from '../../context/state';
+import { AgentContext } from '../../context';
 import NewVerificationTbody from './NewVerificationTbody';
 import TopVerificationTbody from './TopVerificationTbody';
 

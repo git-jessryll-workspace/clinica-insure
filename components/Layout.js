@@ -1,15 +1,18 @@
 import { useContext, useEffect } from "react";
 import {
   AuthContext,
-} from "../context/state";
+} from "../context";
 import AuthLayout from "./AuthLayout";
 
 export default function Layout({ children }) {
  const auth = useContext(AuthContext);
+ useEffect(() => {
+    console.log(auth);
+ }, [])
   return (
     <>
     {
-      !auth.authenticate ? <AuthLayout children={children}/> : <>
+      !auth.user !== null ? <AuthLayout children={children}/> : <>
         {children}
       </>
     }

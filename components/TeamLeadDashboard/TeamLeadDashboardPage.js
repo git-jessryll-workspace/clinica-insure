@@ -17,10 +17,10 @@ const TeamLeadDashboard = () => {
       <div className="py-16 px-8">
         <SectionHead />
         <TransferModal toggleTransferModal={toggleTransferModal} open={open} />
-        <div className="min-h-full min-w-full max-w-auto">
+        {/* <div className="min-h-full min-w-full max-w-auto"> */}
           <VerificationThead />
           <VerificationTbody toggleTransferModal={toggleTransferModal} />
-        </div>
+        {/* </div> */}
       </div>
     </>
   );

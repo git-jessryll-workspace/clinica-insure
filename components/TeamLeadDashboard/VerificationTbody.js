@@ -1,6 +1,6 @@
 import VerificationRow from "./VerificationRow";
 import { useContext } from 'react';
-import { TeamLeadContext } from '../../context/state';
+import { TeamLeadContext } from '../../context';
 
 export default function VerificationTbody({ toggleTransferModal }) {
   const tlContext = useContext(TeamLeadContext);

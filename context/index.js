@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { FolderIcon, HomeIcon, UsersIcon } from "@heroicons/react/outline";
 
 export const TeamLeadContext = createContext();
@@ -213,9 +213,21 @@ export const TeamLeadProvider = (props) => {
 };
 
 export const AuthProvider = (props) => {
+  const [user, setUser] = useState(null);
+
+  const login = (data) => {
+    setUser(data);
+  }
   let data = {
-    authenticate: null,
+    user,
+    login,
   };
+  useEffect(() => {
+    let auth = JSON.parse(localStorage.getItem("auth_login"));
+    if (auth) {
+      setUser(auth);
+    }
+  }, []);
   return (
     <AuthContext.Provider value={data}>{props.children}</AuthContext.Provider>
   );
@@ -305,6 +317,13 @@ export const GlobalProvider = (props) => {
       current: false,
       code: "dashboard",
     },
+    // {
+    //   name: "Verification History",
+    //   href: "/verification",
+    //   icon: HomeIcon,
+    //   current: false,
+    //   code: "verification",
+    // },
     {
       name: "Agent List",
       href: "/agent",

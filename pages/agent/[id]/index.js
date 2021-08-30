@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { useContext, useEffect } from "react";
 import AgentVerificationTbody from "../../../components/TeamLeadAgent/AgentVerificationTbody";
 import AgentVerificationThead from "../../../components/TeamLeadAgent/AgentVerificationThead";
-import { GlobalContext } from "../../../context/state";
+import { GlobalContext } from "../../../context";
 
 const AgentDetail = () => {
   const route = useRouter();
