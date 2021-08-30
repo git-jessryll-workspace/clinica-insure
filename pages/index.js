@@ -10,8 +10,9 @@ export default function Home() {
   }, [])
   return (
     <>
-        {/* <TeamLeadDashboardPage /> */}
-        <AgentDashboardPage />
+    {/* add condition if the user is agent or team lead. */}
+        <TeamLeadDashboardPage />
+        {/* <AgentDashboardPage /> */}
     </>
   );
 }

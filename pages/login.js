@@ -11,9 +11,7 @@ const Login = () => {
 
   const __handleLogin = (e) => {
     e.preventDefault();
-    localStorage.setItem({
-        email,
-    })
+    
     route.push('/');
   };
 

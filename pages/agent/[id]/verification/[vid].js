@@ -2,8 +2,9 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { useContext, useEffect } from "react";
 import { GlobalContext } from "../../../../context/state";
+import VerificationDetail from '../../../../components/Verification/VerificationDetail';
 
-export default function VerificationDetail() {
+export default function VerificationDetailRoute() {
   const global = useContext(GlobalContext);
   const route = useRouter();
   useEffect(() => {

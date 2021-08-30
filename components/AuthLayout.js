@@ -105,8 +105,8 @@ export default function AuthLayout({children}) {
           <CommonProvider>
             <main className="flex-1 relative overflow-y-auto focus:outline-none bg-gray-50">
               {/* add condition if the user is a team lead or not(TeamleadProvider) */}
-              {/* <TeamLeadProvider>{children}</TeamLeadProvider> */}
-              <AgentProvider>{children}</AgentProvider>
+              <TeamLeadProvider>{children}</TeamLeadProvider>
+              {/* <AgentProvider>{children}</AgentProvider> */}
             </main>
           </CommonProvider>
         </div>
