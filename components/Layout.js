@@ -1,11 +1,11 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import {
   AuthContext,
 } from "../context/state";
 import AuthLayout from "./AuthLayout";
 
 export default function Layout({ children }) {
-  const auth = useContext(AuthContext);
+ const auth = useContext(AuthContext);
   return (
     <>
     {
